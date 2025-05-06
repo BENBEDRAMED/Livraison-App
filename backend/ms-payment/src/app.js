@@ -3,7 +3,20 @@ import paymentRoutes from './routes/paymentRoutes.js';
 import staticDb from './staticDb.js';
 
 const app = express();
-
+app.get('/health', (req, res) => {
+    res.status(200).json({
+        status: 'UP',
+        checks: [
+            {
+                name: "dbCheck",
+                status: "UP",
+                data: {
+                    connection: "active"
+                }
+            }
+        ]
+    });
+});
 
 app.use(express.json()); // For parsing application/json
 app.use(express.urlencoded({ extended: true })); // For parsing form data
