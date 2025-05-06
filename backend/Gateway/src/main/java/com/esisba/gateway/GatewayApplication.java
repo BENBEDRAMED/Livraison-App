@@ -1,14 +1,13 @@
-package com.example.ms_user;
+package com.esisba.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-
-public class MsUserApplication {
+public class GatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MsUserApplication.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 
 }

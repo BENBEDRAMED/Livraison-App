@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * L'annotation @FeignClient spécifie le nom du service et son URL.
  * L'URL est configurée dans le fichier application.properties.
  */
-@FeignClient(name = "ms-user", url = "${user-service.url}")
+@FeignClient(name = "ms-user")
 public interface UserServiceClient {
     
     /**
